@@ -3,6 +3,10 @@ data/
 temp/
 model/
 results/
+.bundle/
+vendor/
+Gemfile.lock
+
 
 *~
 *.json

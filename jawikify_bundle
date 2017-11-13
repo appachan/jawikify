@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#ruby src/md_to_json.rb |
+bundle exec ruby src/wrap_json_simple.rb |
+bundle exec ruby src/apply_mecab.rb | bundle exec ruby src/annotate_offset.rb |
+bundle exec ruby src/md_feature_extraction.rb -t features |
+bundle exec ruby src/chunker.rb -m data/md.full -f features -t chunk |
+bundle exec ruby src/extractor.rb |
+bundle exec ruby src/supervised_linker.rb -f extracted -t linked |
+bundle exec ruby src/clean_json.rb

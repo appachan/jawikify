@@ -1,0 +1,3 @@
+[submodule "gems/crfsuite"]
+	path = gems/crfsuite
+	url = git@github.com:chokkan/crfsuite.git
